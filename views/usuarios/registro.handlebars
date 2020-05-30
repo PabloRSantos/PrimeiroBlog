@@ -1,0 +1,23 @@
+ <div id="tudo">
+     {{>header}}
+    <form action="/usuarios/cadastro" method="POST">
+    <div class="input">
+    <label for="nome">Seu nome:</label>
+    <input type="text" name="nome" id="nome">
+    </div>
+    <div class="input">
+    <label for="email">Seu email:</label>
+    <input type="text" name="email" id="email">
+    </div>
+    <div class="input">
+    <label for="senha">Sua senha:</label>
+    <input type="password" name="senha" id="senha">
+    </div>
+    <div class="input">
+    <label for="senha2">Sua senha:</label>
+    <input type="password" name="senha2" id="senha2">
+    </div>
+    <button type="submit">Registrar</button>
+    </form>
+     {{>footer}}
+ </div>

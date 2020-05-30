@@ -1,0 +1,18 @@
+<div id="tudo">
+ {{>header}}
+    <div id="content">
+        {{#each postagens}}
+        <div class="postagens">
+            <h1>{{titulo}}</h1>
+            <p>{{descricao}}</p>
+            <small>{{data}}</small><br>
+            <a href="/admin/formEdit{{_id}}"><button type="button">Editar</button></a>
+            </form>
+        </div>
+        {{else}}
+
+        {{/each}}
+
+    </div>
+ {{>footer}}
+</div>

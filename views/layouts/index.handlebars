@@ -1,0 +1,79 @@
+
+    <div id="tudo">
+        {{>header}}
+
+        <div id="postagens">
+            {{#each postagens}}
+            <article class="post">
+                <div class="img_post">
+                     <img src="{{imagem}}"
+                        alt="">
+                </div>
+                <div class="infos_post">
+                    <h1>{{titulo}}</h1>
+                    <p>{{descricao}}</p>
+                    <p>{{data}}</p>
+                    <div class="btn_post">
+                       <a href="/post{{_id}}"><button>Continue lendo</button></a>
+                    </div>
+                </div>
+            </article>
+            {{else}}
+            <h2>Nenhuma postagem registrada</h2>
+            {{/each}}
+        </div>
+
+        <div id="sidebar">
+            <section>
+                <div class="img_sidebar">
+                    <img src="https://www.clicandoeandando.com/wp-content/uploads/2016/10/Chris-round-300x300.png"
+                        alt="">
+                </div>
+                 <div class="txt_sidebar">
+                    <h1>Ana</h1>
+                    <p>Ana é fotógrafa, empreendedora e corretora. Entre uma coisa e outra, sempre que possível ela
+                        foge do
+                        asfalto
+                        e vai se aventurar em algum meio de mato, com a desculpa de fotografar. </p>
+                </div>
+
+                <button>Saiba mais</button>
+
+            </section>
+
+            <section>
+                <div class="img_sidebar">
+                    <img src="https://www.clicandoeandando.com/wp-content/uploads/2016/10/Chris-round-300x300.png"
+                        alt="">
+                </div>
+                <div class="txt_sidebar">
+                    <h1>Ana</h1>
+                    <p>Ana é fotógrafa, empreendedora e corretora. Entre uma coisa e outra, sempre que possível ela
+                        foge do
+                        asfalto
+                        e vai se aventurar em algum meio de mato, com a desculpa de fotografar. </p>
+                </div>
+
+                <button>Saiba mais</button>
+
+            </section>
+
+            <section>
+                <div class="img_sidebar">
+                    <img src="https://www.clicandoeandando.com/wp-content/uploads/2016/10/Chris-round-300x300.png"
+                        alt="">
+                </div>
+                  <div class="txt_sidebar">
+                    <h1>Ana</h1>
+                    <p>Ana é fotógrafa, empreendedora e corretora. Entre uma coisa e outra, sempre que possível ela
+                        foge do
+                        asfalto
+                        e vai se aventurar em algum meio de mato, com a desculpa de fotografar. </p>
+                </div>
+
+                <button>Saiba mais</button>
+            </section>
+        </div>
+        
+    {{>footer}}
+    </div>

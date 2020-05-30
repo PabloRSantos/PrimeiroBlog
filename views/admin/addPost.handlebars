@@ -1,0 +1,32 @@
+<div id="tudo">
+    {{>header}}
+  
+            <form action="/admin/adicionouPost" method="POST">
+            <button type="submit">Adicionar</button>
+                <div class="input titulo">
+                    <label for="titulo">Titulo:</label><br>
+                    <input type="text" name="titulo" id="titulo"  required>
+                </div>
+                <div class="input descricao">
+                    <label for="descricao">Descrição:</label><br>
+                    <input type="text" name="descricao" id="descricao" required>
+                </div>
+                <div class="input img">
+                    <label for="imagem">Link da Imagem: (opicional)</label><br>
+                    <textarea name="imagem" id="imagem"></textarea>
+                </div>
+                <div class="input conteudo1">
+                    <label for="introducao">Introdução:</label><br>
+                    <textarea name="introducao" id="introducao"  required></textarea>
+                </div>
+                <div class="input conteudo2">
+                    <label for="desenvolvimento">Desenvolvimento:</label><br>
+                    <textarea name="desenvolvimento" id="desenvolvimento" required></textarea>
+                </div>
+                <div class="input conteudo3">
+                    <label for="conclusao">Conclusão:</label><br>
+                    <textarea name="conclusao" id="conclusao" required></textarea>
+                </div>
+            </form>
+    {{>footer}}
+</div>

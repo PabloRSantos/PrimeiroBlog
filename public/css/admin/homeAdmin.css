@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
+    background-color: #f8f8f4;
+}
+
+#tudo {
+    display: grid;
+    grid-template-rows: 1fr 3.5fr 1fr;
+    grid-template-areas: "header"
+    "content"
+    "footer";
+}
+
+/*--------------------HEADER-----------------------*/
+
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 25px 30px 25px;
+    color: #179b84;
+    border-bottom: 2px solid #f2634a;
+}
+
+@media(max-width: 700px){
+    header {
+        display: grid;
+        margin: 0 auto;
+        justify-items: center;
+    }
+
+    header h1 {
+        padding: 0;
+        margin: 15px 0 10px 0;
+    }
+}
+
+header h1 {
+    font-style: italic;
+    margin-left: 10px;
+    padding-bottom: 2px;
+}
+
+header a {
+    text-decoration: none;
+    color:#179b84;
+    cursor: pointer;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+
+header a:hover {
+border-bottom: 2px solid #f2634a;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    margin-right: 10px;
+}
+
+header ul a + a{
+    margin-left: 35px;
+}
+
+/*-------------------CONTENT-----------------------*/
+#content{
+    display: grid;
+    grid-area: content;
+    align-items: center;
+    justify-items: center;
+}
+
+#content2 {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+#content h1{
+   margin: 5px;
+   font-size: 50px;
+   color: #f2634a;
+}
+
+#content h2{
+    color: #179b84;
+    font-size: 25px;
+}
+
+#content #buttons button{
+    border: 2px solid #f2634a;
+    color: #f2634a;
+    background-color: transparent;
+    border-radius: 0 0 3px 0;
+    font-family: 'Roboto Mono', monospace;
+    padding: 3px 12px;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 0;
+    transition: 0.5s;
+}
+
+#content #buttons button:hover{
+    background-color: #179b84;
+    border-color: #179b84;
+    color: white;
+}
+
+@media(max-width: 590px){
+    #buttons {
+        display: grid;
+        grid-template-areas: 
+        "btn1"
+        "btn2"
+        "btn3";
+        justify-items: center;
+    }
+    #buttons .btn1 {
+        grid-area: btn1;
+    }
+    #buttons .btn2 {
+        grid-area: btn2;
+        margin-top: 15px;
+    }
+    #buttons .btn3 {
+        grid-area: btn3;
+        margin-top: 15px;
+    }
+
+    #content h1{
+        font-size: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+     }
+     
+     #content h2{
+         font-size: 25px;
+         display: flex;
+         flex-wrap: wrap;
+         text-align: center;
+     }
+}
+/*--------------------FOOTER-----------------------*/
+
+footer {
+    grid-area: footer;
+    color: #179b84;
+    text-align: center;
+    padding: 15px 0;
+    margin: 15px 25px 0 25px;
+    border-top: 2px solid #f2634a;
+}

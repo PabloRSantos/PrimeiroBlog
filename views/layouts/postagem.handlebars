@@ -1,0 +1,59 @@
+<div id="tudo">
+    {{>header}}
+    <div id="content">
+        <div class="postagens">
+            <div class="horario">
+            <small>{{postagens.data}}</small>
+            </div>
+            <h1>{{postagens.titulo}}</h1>
+            <div class="conteudo">
+                <div class="img">
+            <img src="{{postagens.imagem}}">
+                </div>
+            <div class="introducao">
+                <h2>Introdução</h2>
+            <p>{{postagens.introducao}}</p></div>
+            <div class="desenvolvimento">
+                <h2>Desenvolvimento</h2>
+                <p>{{postagens.desenvolvimento}}</p>
+            </div>
+            <div class="conclusao">
+                <h2>Conclusão</h2>
+                <p>{{postagens.conclusao}}</p>
+            </div>
+            
+            </div>
+            </form>
+        </div>
+    </div>
+    <section id="tudo_comentarios">
+
+            <section id="comentarios">
+            {{#each comentario}}
+            <div class="comentario">
+                <div class="img_comentario">
+                    <img
+                        src="https://www.nicepng.com/png/full/202-2022264_usuario-annimo-usuario-annimo-user-icon-png-transparent.png">
+                </div>
+                <div class="comentario_content">
+                    <h2>{{nome}}</h2>
+                    <p>{{conteudo}}</p>
+                </div>
+            </div>
+            {{else}}
+            <div class="comentario">
+            <p>Não há comentarios</p>
+            </div>
+            {{/each}}
+            </section>
+            <form action="/comentario" method="POST">
+            <div id="input">
+                <input type="text" placeholder="Seu nome" name="nomeUser" id="nomeUser">
+                <input type="hidden" name="idPost" id="idPost" value="{{postagens._id}}">
+                <input type="text" name="comentario" id="comentario" placeholder="Seu comentário">
+                <button>Enviar</button>
+                </form>
+        </div>
+        </section>
+    {{>footer}}
+</div>
