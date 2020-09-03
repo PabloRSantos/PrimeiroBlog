@@ -1,6 +1,5 @@
 # Blog de tutoriais fictício
 
-<img src="/screenshots/blogTutoriais.png">
 
 ## Tecnologias usadas:
 
