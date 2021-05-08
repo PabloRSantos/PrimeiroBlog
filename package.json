@@ -10,7 +10,7 @@
     "express-session": "^1.17.1",
     "express-handlebars": "^4.0.3",
     "mongoose": "^5.9.10",
-    "handlebars": "^4.5.3",
+    "handlebars": "^4.7.7",
     "passport-local": "^1.0.0",
     "passport": "^0.4.1",
     "nodemon": "2.0.4",
